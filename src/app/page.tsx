@@ -1,6 +1,7 @@
 import { SettingsTabs } from "@/components/SettingsTabs"
 import * as Input from '@/components/Input'
 import { LuMail } from "react-icons/lu"
+import * as FileInput from '@/components/Form/FileInput'
 
 export default function Home() {
   return (
@@ -35,9 +36,9 @@ export default function Home() {
           <div className="grid gap-3 grid-cols-form pt-6">
             <label htmlFor="email" className="text-sm font-medium text-zinc-700">Email adress</label>
             <Input.Root>
-            <Input.Prefix>
-              <LuMail className="h-5 w-5 text-zinc-500 mr-2" />
-            </Input.Prefix>
+              <Input.Prefix>
+                <LuMail className="h-5 w-5 text-zinc-500 mr-2" />
+              </Input.Prefix>
               <Input.Control type="email" id="email" defaultValue="patriciasilvalimah@gmail.com" />
             </Input.Root>
           </div>
@@ -46,13 +47,19 @@ export default function Home() {
             <label htmlFor="photo" className="text-sm font-medium text-zinc-700">
               Your photo
               <span className="mt-0.5 text-sm font-normal text-zinc-500 block">This will be displayed on your profile.</span>
-              </label>
-            <div></div>
+            </label>
+
+            <FileInput.Root className="flex items-start gap-5">
+              <FileInput.ImagePreview />
+              <FileInput.Trigger />
+              <FileInput.Control />
+            </FileInput.Root>
+
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-6">
             <label htmlFor="role" className="text-sm font-medium text-zinc-700">Role</label>
-            <Input.Root>            
+            <Input.Root>
               <Input.Control type="role" id="role" defaultValue="Front-End Developer" />
             </Input.Root>
           </div>
@@ -71,7 +78,7 @@ export default function Home() {
             <label htmlFor="bio" className="text-sm font-medium text-zinc-700">
               Bio
               <span className="mt-0.5 text-sm font-normal text-zinc-500 block">Write a short introduction.</span>
-              </label>
+            </label>
             <div></div>
           </div>
 
@@ -79,12 +86,15 @@ export default function Home() {
             <label htmlFor="projects" className="text-sm font-medium text-zinc-700">
               Portfolio projects
               <span className="mt-0.5 text-sm font-normal text-zinc-500 block">Share a few snippets of your work.</span>
-              </label>
-            <div></div>
+            </label>
+            <FileInput.Root>
+              <FileInput.Trigger />
+              <FileInput.Control />
+            </FileInput.Root>
           </div>
-          
+
           <div className="flex items-center justify-end gap-2 pt-6">
-          <button className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50 transition" type="button">Cancel</button>
+            <button className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50 transition" type="button">Cancel</button>
             <button className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-sky-500 text-white hover:bg-sky-600 transition" type="submit">Save</button>
           </div>
         </form>
