@@ -1,9 +1,10 @@
 import { SettingsTabs } from "@/components/SettingsTabs"
 import * as Input from '@/components/Input'
-import { LuMail } from "react-icons/lu"
+import { LuBold, LuItalic, LuLink, LuList, LuListOrdered, LuMail } from "react-icons/lu"
 import * as FileInput from '@/components/Form/FileInput'
 import { Select } from "../components/Form/Select"
 import { SelectItem } from "@/components/Form/Select/SelectItem"
+import { Textarea } from "@/components/Form/Textarea"
 
 
 export default function Home() {
@@ -70,16 +71,16 @@ export default function Home() {
           <div className="grid gap-3 grid-cols-form pt-6">
             <label htmlFor="country" className="text-sm font-medium text-zinc-700">Country</label>
             <Select placeholder="Select a country">
-              <SelectItem value="BR" text="Brazil"/>
-              <SelectItem value="USA" text="United States"/>
+              <SelectItem value="BR" text="Brazil" />
+              <SelectItem value="USA" text="United States" />
             </Select>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-6">
             <label htmlFor="timezone" className="text-sm font-medium text-zinc-700">Timezone</label>
             <Select placeholder="Select a timezone">
-              <SelectItem value="utc8" text="Pacific Standard Time (UTC-08:00)"/>
-              <SelectItem value="utc3" text="America São Paulo(UTC-03:00)"/>
+              <SelectItem value="utc8" text="Pacific Standard Time (UTC-08:00)" />
+              <SelectItem value="utc3" text="America São Paulo(UTC-03:00)" />
             </Select>
           </div>
 
@@ -88,7 +89,32 @@ export default function Home() {
               Bio
               <span className="mt-0.5 text-sm font-normal text-zinc-500 block">Write a short introduction.</span>
             </label>
-            <div></div>
+            <div className="space-y-3">
+              <div className="grid gap-3 grid-cols-2">
+                <Select placeholder="" defaultValue="normal">
+                  <SelectItem value="normal" defaultChecked text="Normal Text" />
+                  <SelectItem value="md" text="Markdown" />
+                </Select>
+                <div className="flex items-center gap-1">
+                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                    <LuBold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                    <LuItalic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                    <LuLink className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                    <LuList className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                    <LuListOrdered className="h-4 w-4 text-zinc-500" strokeWidth={3} />
+                  </button>
+                </div>
+              </div>
+              <Textarea id="bio" defaultValue="I'm a ReactJS Frontend Developer"/>
+            </div>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-6">
