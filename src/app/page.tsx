@@ -2,6 +2,9 @@ import { SettingsTabs } from "@/components/SettingsTabs"
 import * as Input from '@/components/Input'
 import { LuMail } from "react-icons/lu"
 import * as FileInput from '@/components/Form/FileInput'
+import { Select } from "../components/Form/Select"
+import { SelectItem } from "@/components/Form/Select/SelectItem"
+
 
 export default function Home() {
   return (
@@ -66,12 +69,18 @@ export default function Home() {
 
           <div className="grid gap-3 grid-cols-form pt-6">
             <label htmlFor="country" className="text-sm font-medium text-zinc-700">Country</label>
-            <div></div>
+            <Select placeholder="Select a country">
+              <SelectItem value="BR" text="Brazil"/>
+              <SelectItem value="USA" text="United States"/>
+            </Select>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-6">
             <label htmlFor="timezone" className="text-sm font-medium text-zinc-700">Timezone</label>
-            <div></div>
+            <Select placeholder="Select a timezone">
+              <SelectItem value="utc8" text="Pacific Standard Time (UTC-08:00)"/>
+              <SelectItem value="utc3" text="America São Paulo(UTC-03:00)"/>
+            </Select>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-6">
