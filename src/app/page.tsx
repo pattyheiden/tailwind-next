@@ -5,6 +5,7 @@ import * as FileInput from '@/components/Form/FileInput'
 import { Select } from "../components/Form/Select"
 import { SelectItem } from "@/components/Form/Select/SelectItem"
 import { Textarea } from "@/components/Form/Textarea"
+import { Button } from "@/components/Button"
 
 
 export default function Home() {
@@ -20,8 +21,8 @@ export default function Home() {
             <span className="text-sm text-zinc-500">Update your photo and personal details here.</span>
           </div>
           <div className="flex items-center gap-2">
-            <button className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50 transition" type="button">Cancel</button>
-            <button className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-sky-500 text-white hover:bg-sky-600 transition" type="submit" form="settings">Save</button>
+            <Button type="button" variant="outline">Cancel</Button>
+            <Button type="submit" form="settings" variant="primary">Save</Button>
           </div>
         </div>
         <form className="mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200" id="settings">
