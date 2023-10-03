@@ -97,21 +97,21 @@ export default function Home() {
                   <SelectItem value="md" text="Markdown" />
                 </Select>
                 <div className="flex items-center gap-1">
-                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                  <Button variant="ghost" type="button">
                     <LuBold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                  </button>
-                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <LuItalic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                  </button>
-                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <LuLink className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                  </button>
-                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <LuList className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                  </button>
-                  <button className="rounded-md p-2 hover:bg-zinc-50" type="button">
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <LuListOrdered className="h-4 w-4 text-zinc-500" strokeWidth={3} />
-                  </button>
+                  </Button>
                 </div>
               </div>
               <Textarea id="bio" defaultValue="I'm a ReactJS Frontend Developer"/>
@@ -131,8 +131,8 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-2 pt-6">
-            <button className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50 transition" type="button">Cancel</button>
-            <button className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-sky-500 text-white hover:bg-sky-600 transition" type="submit">Save</button>
+          <Button type="button" variant="outline">Cancel</Button>
+            <Button type="submit" form="settings" variant="primary">Save</Button>
           </div>
         </form>
       </div>
