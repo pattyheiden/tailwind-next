@@ -14,8 +14,8 @@ export function ImagePreview() {
 
     if (previewURL === null) {
         return (
-            <div className="bg-sky-50 flex h-16 w-16 items-center justify-center rounded-full">
-                <LuUser className="w-8 h-8 text-sky-500" />
+            <div className="bg-sky-50 flex h-16 w-16 items-center justify-center rounded-full dark:bg-sky-500/10">
+                <LuUser className="w-8 h-8 text-sky-500 dark:text-sky-300" />
             </div>
         )
     } else {
